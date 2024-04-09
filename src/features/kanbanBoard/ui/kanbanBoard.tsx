@@ -49,11 +49,11 @@ export function KanbanBoard() {
 		<DragDropContext onDragEnd={handleDragEnd}>
 			<Flex
 				flexGrow="1"
-				direction="row"
-				justifyContent="space-evenly"
-				gap="32px"
+				direction={['column', 'row']}
+				justifyContent={['flex-start', 'flex-start', 'space-evenly']}
+				alignItems={['center', 'unset']}
+				gap={['32px', '16px', '16px', '32px']}
 				width="100%"
-				height="100%"
 			>
 				<Column title="ToDo" items={issues.todo} type="todo" />
 				<Column title="In Progress" items={issues.progress} type="progress" />

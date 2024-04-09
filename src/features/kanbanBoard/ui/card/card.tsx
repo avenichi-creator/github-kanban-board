@@ -42,6 +42,7 @@ export function IssueCard(props: IssueCardProps) {
 				<ChakraCard
 					ref={provided.innerRef}
 					size="sm"
+					padding={['10px', '10px', '12px', '16px']}
 					borderWidth="2px"
 					borderStyle="solid"
 					borderLeft="none"
@@ -53,10 +54,10 @@ export function IssueCard(props: IssueCardProps) {
 					{...provided.draggableProps}
 					{...provided.dragHandleProps}
 				>
-					<CardHeader>
+					<CardHeader padding="unset" paddingBottom={['8px', '8px', '10px', '12px']}>
 						<Heading size="md">{title}</Heading>
 					</CardHeader>
-					<CardBody>
+					<CardBody padding="unset" paddingBottom={['8px', '8px', '10px', '12px']}>
 						<Text>
 							#{number} opened{' '}
 							{calculatedDate > 365
@@ -66,7 +67,7 @@ export function IssueCard(props: IssueCardProps) {
 									: `${Math.ceil(calculatedDate)} days ago`}
 						</Text>
 					</CardBody>
-					<CardFooter>
+					<CardFooter padding="unset">
 						<Text>
 							{userLogin} | Comments: {comments}
 						</Text>

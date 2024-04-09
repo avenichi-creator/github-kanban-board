@@ -25,7 +25,9 @@ export function Column(props: ColumnProps) {
 					ref={provided.innerRef}
 					flexDirection="column"
 					as="section"
-					width="400px"
+					width="100%"
+					minHeight="200px"
+					maxWidth={[350, 375]}
 					gap="16px"
 					margin="0px"
 					{...provided.droppableProps}
@@ -37,7 +39,7 @@ export function Column(props: ColumnProps) {
 						flexDirection="column"
 						flexGrow="1"
 						gap="12px"
-						padding="12px"
+						padding={['8px', '8px', '8px', '12px']}
 						background={appColors.issueColumn}
 						borderRadius="5px"
 					>

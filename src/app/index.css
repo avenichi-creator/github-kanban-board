@@ -1,0 +1,6 @@
+html,
+body,
+.app {
+	min-height: 100dvh !important;
+	width: 100%;
+}

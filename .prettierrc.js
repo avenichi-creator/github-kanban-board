@@ -4,7 +4,7 @@ module.exports = {
 	semi: true,
 	singleQuote: true,
 	jsxSingleQuote: false,
-	trailingComa: 'all',
+	trailingComma: 'all',
 	printWidth: 100,
 	endOfLine: 'lf',
 	importOrder: [

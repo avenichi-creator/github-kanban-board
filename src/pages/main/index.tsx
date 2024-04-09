@@ -6,7 +6,13 @@ import { Search } from 'features/search';
 
 export function MainPage() {
 	return (
-		<Flex flexDirection="column" gap="16px" minHeight="100vh" width="100%" padding="32px 24px">
+		<Flex
+			flexDirection="column"
+			gap={['12px', '12px', '16px']}
+			minHeight="100vh"
+			width="100%"
+			padding={['16px 8px', '16px 8px', '32px 24px']}
+		>
 			<Search />
 			<RepoLinks />
 			<KanbanBoard />

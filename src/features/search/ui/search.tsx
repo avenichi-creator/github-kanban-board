@@ -17,7 +17,7 @@ export function Search() {
 	};
 
 	return (
-		<Flex gap="8px">
+		<Flex gap="8px" flexDirection={['column', 'row']}>
 			<Input
 				ref={inputRef}
 				pattern="^https://github.com/.+/.+"

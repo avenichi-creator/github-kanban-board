@@ -9,17 +9,31 @@ export function RepoLinks() {
 	const { repo, isLoading } = useAppSelector((state) => state.kanban);
 
 	return (
-		<Flex width="100%" flexDirection="row" gap="24px">
+		<Flex width="100%" flexDirection="row" flexWrap="wrap" gap={['8px', '12px', '16px']}>
 			{isLoading ? (
 				<RepoLinkLoader />
 			) : repo ? (
 				<>
-					<Flex alignItems="center" flexDirection="row" gap="4px">
-						<Link color={appColors.link} href={repo.ownerUrl}>
+					<Flex maxWidth="100%" alignItems="center" flexDirection="row" overflow="hidden" gap="4px">
+						<Link
+							whiteSpace="nowrap"
+							textOverflow="ellipsis"
+							overflow="hidden"
+							color={appColors.link}
+							href={repo.ownerUrl}
+							target="_blank"
+						>
 							{repo.ownerLogin}
 						</Link>
 						<ChevronRightIcon color={appColors.link} />
-						<Link color={appColors.link} href={repo.htmlUrl}>
+						<Link
+							whiteSpace="nowrap"
+							textOverflow="ellipsis"
+							overflow="hidden"
+							color={appColors.link}
+							href={repo.htmlUrl}
+							target="_blank"
+						>
 							{repo.name}
 						</Link>
 					</Flex>
@@ -30,10 +44,24 @@ export function RepoLinks() {
 				</>
 			) : (
 				<>
-					<Flex alignItems="center" flexDirection="row" gap="4px">
-						<Text color={appColors.link}>Owner Name</Text>
+					<Flex maxWidth="100%" alignItems="center" flexDirection="row" overflow="hidden" gap="4px">
+						<Text
+							whiteSpace="nowrap"
+							textOverflow="ellipsis"
+							overflow="hidden"
+							color={appColors.link}
+						>
+							Owner Name
+						</Text>
 						<ChevronRightIcon color={appColors.link} />
-						<Text color={appColors.link}>Repo Name</Text>
+						<Text
+							whiteSpace="nowrap"
+							textOverflow="ellipsis"
+							overflow="hidden"
+							color={appColors.link}
+						>
+							Repo Name
+						</Text>
 					</Flex>
 					<Flex alignItems="center" flexDirection="row" gap="4px">
 						<StarIcon color={appColors.star} />

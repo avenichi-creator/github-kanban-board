@@ -5,8 +5,8 @@ import { appColors } from 'shared/config/colors';
 
 export function RepoLinkLoader() {
 	return (
-		<Flex width="100%" flexDirection="row" gap="24px">
-			<Flex alignItems="center" direction="row" gap="4px">
+		<Flex width="100%" flexDirection="row" flexWrap="wrap" gap={['8px', '12px', '16px']}>
+			<Flex maxWidth="100%" alignItems="center" flexDirection="row" overflow="hidden" gap="4px">
 				<Skeleton>
 					<Text>Skeleton text</Text>
 				</Skeleton>
